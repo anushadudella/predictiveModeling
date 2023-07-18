@@ -11,6 +11,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 from sklearn.metrics import classification_report
 
+# Main file having the plotting of bulimia and covid
+
 df4, df5 = getGoogleArray('bulimia', 'covid', '2020-04-04', '2021-04-10')
 dftimes = df4.index.tolist()
 dfkeyword1 = df4['bulimia'].tolist()
