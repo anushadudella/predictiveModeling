@@ -7,6 +7,8 @@ from getGoogleData import getGoogleArray
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.seasonal import seasonal_decompose
 
+# Commenting lot of lines for clarity
+
 # def getDataFrame():
 df4, df5 = getGoogleArray('bulimia', 'covid', '2020-04-04', '2021-04-10')
 dftimes1 = df4.index.tolist()
