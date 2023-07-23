@@ -42,7 +42,7 @@ Y= predict_dataframe[['Covid']]  #the target output
 # print(Y)
 
 X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.4,random_state=100)
-# print(X_train)
+# print(X_train)https://github.com/anushadudella/icr2023-predictiveModeling
 # print(y_train)
 
 logreg= LogisticRegression()
