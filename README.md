@@ -1,0 +1,1 @@
+- research project in order to predict the spread of mental health diseases and COVID
