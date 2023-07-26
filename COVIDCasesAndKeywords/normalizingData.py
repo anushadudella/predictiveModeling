@@ -6,10 +6,6 @@ ny_df = pd.DataFrame(df[df['state'] == 'New York'])
 my_ny_df = pd.DataFrame(ny_df, columns = ['date','state','cases'])
 
 my_ny_df.sort_values(by=['date'])
-
-# print(my_ny_df.head(10))
-# exit(0)
-# Sum of all the cases grouped by dates
 cases_sum = 0
 prevdate = '2020-03-01'
 
@@ -43,15 +39,20 @@ for index,row in nycasesbydate.iterrows():
 
     if(index % 7 != 0):
         cases_sum = cases_sum + int(row['casesbydate'])
-        print('index is ' + str(index))
     else:
-        print('7 multiple index is ' + str(index))
         rowdata = []
         rowdata.append('New York')
         rowdata.append(row['date'])
-        rowdata.append(str(cases_sum))
+        rowdata.append(cases_sum)
         insert(nycasesbyweek,rowdata)
         cases_sum = 0
 
+df_min_max_scaled = nycasesbyweek.copy()
+print(df_min_max_scaled)
+# apply normalization techniquesZ
+df_min_max_scaled['casesbyweek'] = (df_min_max_scaled['casesbyweek'] - df_min_max_scaled['casesbyweek'].min()) / (
+                df_min_max_scaled['casesbyweek'].max() - df_min_max_scaled['casesbyweek'].min())
 
-print(nycasesbyweek)
+df_min_max_scaled['casesbyweek']  = round(df_min_max_scaled['casesbyweek'] * 100)
+# view normalized data
+print(df_min_max_scaled)
