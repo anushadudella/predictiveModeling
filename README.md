@@ -1,5 +1,1 @@
 - research project in order to predict the spread of mental health diseases and COVID
-- extracted the data using an API
-- analyzed the data of different regions and time periods
-- integrated the machine learning model in order to predict
-- future values from past values

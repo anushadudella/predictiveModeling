@@ -26,7 +26,7 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
 
 #Corona Depression 0.64
 #Corona Anxiety 0.4
-#Covid 19 depression 0.53
+#Covid 19 Depression 0.53
 #Covid 19 Anxiety 0.39
 #Covid 19 Death 0.83
 #Covid 19 Suicide -0.083

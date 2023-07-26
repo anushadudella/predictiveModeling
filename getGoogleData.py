@@ -26,7 +26,7 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
 
 #Corona Depression 0.64
 #Corona Anxiety 0.4
-#Covid 19 depression 0.53
+#Covid 19 Depression 0.53
 #Covid 19 Anxiety 0.39
 #Covid 19 Death 0.83
 #Covid 19 Suicide -0.083
@@ -38,19 +38,21 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
 #Covid 19 adhd -0.71
 
 
-keyword1 = 'Covid 19'
+keyword1 = 'Corona'
 keyword2_list = ['Autism', 'Death','Depression', 'Anxiety']
 geoparam = ['US-FL','US-NY','US-NJ']
+date1 = '2020-04-04'
+date2 = '2021-04-06'
 
 try:
     for geocode in geoparam:
         for keyword2 in keyword2_list:
-            time_keyword1 = getDataFrame(keyword1,'2020-04-04', '2021-04-06', geocode)
-            time_keyword2 = getDataFrame(keyword2,'2020-04-04', '2021-04-06', geocode)
+            time_keyword1 = getDataFrame(keyword1, date1, date2, geocode)
+            time_keyword2 = getDataFrame(keyword2, date1, date2, geocode)
             list1 = time_keyword1[keyword1].to_list()
             list2 = time_keyword2[keyword2].to_list()
             print(keyword1 + ',' + keyword2 + ',' + geocode + ',' + str(numpy.corrcoef(list1,list2).flat[1]))
-            time.sleep(20)
+            # time.sleep(10)
 except Exception as e:
     print(e.args)
 

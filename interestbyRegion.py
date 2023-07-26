@@ -32,7 +32,7 @@ def getDataFrame(keyword1, date1, date2):
 # print(time_keyword)
 # # plt.show()
 
-time_keyword1 = getDataFrame('anorexia','2020-04-04', '2021-04-06')
+time_keyword1 = getDataFrame('Anorexia','2020-04-04', '2021-04-06')
 time_keyword2 = getDataFrame('covid','2020-04-04', '2021-04-06')
 ax = time_keyword1.plot(x='Time', y='Keyword')
 time_keyword2.plot(ax=ax, x='Time', y='Keyword')
