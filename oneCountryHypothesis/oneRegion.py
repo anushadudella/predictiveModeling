@@ -12,7 +12,7 @@ def getGoogleArray(keyword1, date1, date2):
     pytrend = TrendReq()
     pytrend.build_payload(kw_list=[keyword1], timeframe=[date1 + ' ' + date2])
     df2 = pytrend.interest_over_time()
-    # filepath = Path('/Users/kkaa_austin/PycharmProjects/predictiveModeling/COVIDandKeywords' + keyword1 + 'Data.csv')
+    # filepath = Path('/Users/kkaa_austin/PycharmProjects/predictiveModeling/COVIDCasesAndKeywords' + keyword1 + 'Data.csv')
     # df2.to_csv(filepath)
     return df2
 
