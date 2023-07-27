@@ -50,7 +50,7 @@ for index,row in uscasesbydate.iterrows():
 df_min_max_scaled = uscasesbyweek.copy()
 # print(df_min_max_scaled)
 
-# apply normalization techniques
+# apply normalization techniques (scales it down)
 df_min_max_scaled['casesbyweek'] = (df_min_max_scaled['casesbyweek'] - df_min_max_scaled['casesbyweek'].min()) / (
                 df_min_max_scaled['casesbyweek'].max() - df_min_max_scaled['casesbyweek'].min())
 
@@ -58,7 +58,7 @@ df_min_max_scaled['casesbyweek']  = round(df_min_max_scaled['casesbyweek'] * 100
 
 
 
-
+# GOOGLE TRENDS API PART
 
 def getGoogleArray(keyword1, date1, date2):
     pytrend = TrendReq()
