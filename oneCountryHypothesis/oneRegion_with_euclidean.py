@@ -20,7 +20,6 @@ def getGoogleArray(keyword1, date1, date2):
     # df2.to_csv(filepath)
     return df2
 
-
 def getDataFrame(keyword1, date1, date2):
     df3 = getGoogleArray(keyword1, date1, date2)
     dftimes1 = df3.index.tolist()
@@ -32,8 +31,8 @@ def getDataFrame(keyword1, date1, date2):
     return time_keyword1
 
 
-time_keyword1 = getDataFrame('depression', '2018-04-08', '2019-04-06')
-time_keyword2 = getDataFrame('depression', '2020-04-05', '2021-04-03')
+time_keyword1 = getDataFrame('anxiety', '2018-04-08', '2019-04-06')
+time_keyword2 = getDataFrame('anxiety', '2020-04-05', '2021-04-03')
 
 time1 = time_keyword1.index.tolist()
 time1_series = time_keyword1.index
@@ -42,7 +41,7 @@ keyword1_series = time_keyword1['Keyword']
 
 time1_keyword1_2018_19 = pd.DataFrame(
     {'Time': time1,
-     'Depression 2018-2019': keyword1,
+     'Anxiety 2018-2019': keyword1,
      })
 
 time2 = time_keyword2.index.tolist()
@@ -51,11 +50,11 @@ keyword2_series = time_keyword2['Keyword']
 
 time2_keyword2_2020_21 = pd.DataFrame(
     {'Time': time2,
-     'Depression 2020-2021': keyword2,
+     'Anxiety 2020-2021': keyword2,
      })
 
-ax = time1_keyword1_2018_19.plot(x='Time', y='Depression 2018-2019')
-time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Depression 2020-2021')
+ax = time1_keyword1_2018_19.plot(x='Time', y='Anxiety 2018-2019')
+time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Anxiety 2020-2021')
 
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
@@ -69,7 +68,7 @@ plt.ylabel('Freq. of Keywords')
 my_df_dict2 = {'2018_19' : keyword1_series , '2020_21' : keyword2_series}
 
 my_df = pd.DataFrame(my_df_dict2)
-# print(my_df)
+print(my_df)
 
 euc_dist = euclidean_distances(my_df.T)
 print(euc_dist)

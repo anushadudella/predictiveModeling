@@ -74,16 +74,16 @@ def getDataFrame(keyword1, date1, date2):
     dfkeyword1 = df3[keyword1].tolist()
     time_keyword1 = pd.DataFrame(
     {'Time': dftimes1,
-     'Depression': dfkeyword1,
+     'Sadness': dfkeyword1,
     })
     return time_keyword1
 
 
-all_keyworddata= getDataFrame('Depression','2020-04-05', '2021-04-06')
+all_keyworddata= getDataFrame('Sadness','2020-04-05', '2021-04-06')
 time_keyword1 = pd.DataFrame(all_keyworddata[all_keyworddata['Time'] <= '2020-12-27'])
 
 # print(time_keyword1)
-google_trends = time_keyword1['Depression'].to_list()
+google_trends = time_keyword1['Sadness'].to_list()
 # print(google_trends)
 
 # gets correlation between the casesbyweek (scaled) and other google trends
@@ -95,7 +95,7 @@ print(str(numpy.corrcoef(google_trends,usCovidData)))
 plt.scatter(usCovidData, google_trends , label='scatterplot')
 plt.legend(loc='best', fontsize=16)
 plt.xlabel('COVID-19')
-plt.ylabel('Depression')
+plt.ylabel('Sadness')
 plt.show()
 
 
