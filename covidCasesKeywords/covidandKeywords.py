@@ -64,9 +64,8 @@ def getGoogleArray(keyword1, date1, date2):
     pytrend = TrendReq()
     pytrend.build_payload(kw_list=[keyword1], timeframe=[date1 + ' ' + date2])
     df2 = pytrend.interest_over_time()
-    # filepath = Path('/home/adudella/PycharmProjects/googleTrends/' + keyword1 + 'Data.csv')
-    # # df2.to_csv(filepath)
-    # print(df2)
+    filepath = '/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/' + keyword1 + 'Data.csv'
+    df2.to_csv(filepath)
     return df2
 
 def getDataFrame(keyword1, date1, date2):
@@ -75,16 +74,16 @@ def getDataFrame(keyword1, date1, date2):
     dfkeyword1 = df3[keyword1].tolist()
     time_keyword1 = pd.DataFrame(
     {'Time': dftimes1,
-     'Anorexia': dfkeyword1,
+     'Depression': dfkeyword1,
     })
     return time_keyword1
 
 
-all_keyworddata= getDataFrame('Anorexia','2020-04-05', '2021-04-06')
+all_keyworddata= getDataFrame('Depression','2020-04-05', '2021-04-06')
 time_keyword1 = pd.DataFrame(all_keyworddata[all_keyworddata['Time'] <= '2020-12-27'])
 
 # print(time_keyword1)
-google_trends = time_keyword1['Anorexia'].to_list()
+google_trends = time_keyword1['Depression'].to_list()
 # print(google_trends)
 
 # gets correlation between the casesbyweek (scaled) and other google trends
@@ -96,7 +95,7 @@ print(str(numpy.corrcoef(google_trends,usCovidData)))
 plt.scatter(usCovidData, google_trends , label='scatterplot')
 plt.legend(loc='best', fontsize=16)
 plt.xlabel('COVID-19')
-plt.ylabel('Anorexia')
+plt.ylabel('Depression')
 plt.show()
 
 
