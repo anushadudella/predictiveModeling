@@ -3,9 +3,15 @@ from pytrends.request import TrendReq
 import numpy
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('us-counties-2020.csv')
-april_df = pd.DataFrame(df[df['date'] >= '2020-04-05'])
-my_us_df = pd.DataFrame(april_df, columns = ['date','cases'])
+df2020 = pd.read_csv('us-counties-2020.csv')
+df2021 = pd.read_csv('us-counties-2021.csv')
+
+combine_df = [df2020,df2021]
+df = pd.concat(combine_df)
+
+date_df = pd.DataFrame(df[(df['date'] >= '2020-04-05') & (df['date'] <= '2021-04-03')])
+#april_df = pd.DataFrame(date_df[date_df['state'] == 'Oregon'])
+my_us_df = pd.DataFrame(date_df, columns = ['date','cases'])
 
 my_us_df.sort_values(by=['date'])
 cases_sum = 0
@@ -47,15 +53,21 @@ for index,row in uscasesbydate.iterrows():
         insert(uscasesbyweek,rowdata)
         cases_sum = 0
 
-df_min_max_scaled = uscasesbyweek.copy()
-# print(df_min_max_scaled)
+df_max_scaled = uscasesbyweek.copy()
+
 
 # apply normalization techniques (scales it down)
-df_min_max_scaled['casesbyweek'] = (df_min_max_scaled['casesbyweek'] - df_min_max_scaled['casesbyweek'].min()) / (
-                df_min_max_scaled['casesbyweek'].max() - df_min_max_scaled['casesbyweek'].min())
+df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['casesbyweek'].min()) / (
+                df_max_scaled['casesbyweek'].max() - df_max_scaled['casesbyweek'].min())
 
-df_min_max_scaled['casesbyweek']  = round(df_min_max_scaled['casesbyweek'] * 100)
+# df_max_scaled['casesbyweek'] = df_max_scaled['casesbyweek'] / df_max_scaled['casesbyweek'].abs().max()
+#
+# df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] -
+#                        df_max_scaled['casesbyweek'].mean()) / df_max_scaled['casesbyweek'].std()
 
+df_max_scaled['casesbyweek']  = round(df_max_scaled['casesbyweek'] * 100)
+
+print(df_max_scaled['casesbyweek']  )
 
 
 # GOOGLE TRENDS API PART
@@ -64,8 +76,6 @@ def getGoogleArray(keyword1, date1, date2):
     pytrend = TrendReq()
     pytrend.build_payload(kw_list=[keyword1], timeframe=[date1 + ' ' + date2])
     df2 = pytrend.interest_over_time()
-    # filepath = '/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/' + keyword1 + 'Data.csv'
-    # df2.to_csv(filepath)
     return df2
 
 def getDataFrame(keyword1, date1, date2):
@@ -74,28 +84,26 @@ def getDataFrame(keyword1, date1, date2):
     dfkeyword1 = df3[keyword1].tolist()
     time_keyword1 = pd.DataFrame(
     {'Time': dftimes1,
-     'Happy': dfkeyword1,
+     'ADHD': dfkeyword1,
     })
     return time_keyword1
 
 
-all_keyworddata= getDataFrame('Happy','2020-04-05', '2021-04-06')
-time_keyword1 = pd.DataFrame(all_keyworddata[all_keyworddata['Time'] <= '2020-12-27'])
+all_keyworddata= getDataFrame('ADHD','2020-04-05', '2021-04-03')
+time_keyword1 = all_keyworddata #pd.DataFrame(all_keyworddata[all_keyworddata['Time'] <= '2020-12-27'])
 
 # print(time_keyword1)
-google_trends = time_keyword1['Happy'].to_list()
-# print(google_trends)
+google_trends = time_keyword1['ADHD'].to_list()
+print(google_trends)
 
 # gets correlation between the casesbyweek (scaled) and other google trends
-usCovidData = df_min_max_scaled['casesbyweek'].to_list()
-# print(usCovidData)
+usCovidData = df_max_scaled['casesbyweek'].to_list()
+print(usCovidData)
 
 print(str(numpy.corrcoef(google_trends,usCovidData)))
 
-# plt.scatter(usCovidData, google_trends , label='scatterplot')
-# plt.legend(loc='best', fontsize=16)
-# plt.xlabel('COVID-19')
-# plt.ylabel('Upset')
-# plt.show()
-
-
+plt.scatter(usCovidData, google_trends , label='scatterplot')
+plt.legend(loc='best', fontsize=16)
+plt.xlabel('COVID-19')
+plt.ylabel('ADHD')
+plt.show()
