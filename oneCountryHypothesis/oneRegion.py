@@ -32,8 +32,8 @@ def getDataFrame(keyword1, date1, date2):
     return time_keyword1
 
 
-time_keyword1 = getDataFrame('depression', '2018-04-04', '2019-04-06')
-time_keyword2 = getDataFrame('depression', '2020-04-05', '2021-04-06')
+time_keyword1 = getDataFrame('anorexia', '2018-04-04', '2019-04-06')
+time_keyword2 = getDataFrame('anorexia', '2020-04-05', '2021-04-06')
 
 time1 = time_keyword1.index.tolist()
 keyword1 = time_keyword1['Keyword'].tolist()
@@ -52,8 +52,8 @@ time2_keyword2_2020_21 = pd.DataFrame(
 ax = time1_keyword1_2018_19.plot(x='Time', y='2018-2019')
 time2_keyword2_2020_21.plot(ax=ax, x='Time', y='2020-2021')
 
-plt.title("Depression")
-plt.xlabel('Time in Weeks')
+plt.title("Anorexia")
+plt.xlabel('Months')
 ax.set_xticklabels(['blank','April','June','August', 'November', 'January', 'March'])
 plt.ylabel('Google Search Frequency')
 plt.show()

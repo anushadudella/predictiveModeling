@@ -31,8 +31,8 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
     return time_keyword1
 
 
-time_keyword1 = getDataFrame('anorexia', '2018-04-08', '2019-04-06', 'US-OH')
-time_keyword2 = getDataFrame('anorexia', '2020-04-05', '2021-04-03', 'US-OH')
+time_keyword1 = getDataFrame('anorexia', '2018-04-08', '2019-04-06', 'US-CO')
+time_keyword2 = getDataFrame('anorexia', '2020-04-05', '2021-04-03', 'US-CO')
 
 time1 = time_keyword1.index.tolist()
 time1_series = time_keyword1.index
