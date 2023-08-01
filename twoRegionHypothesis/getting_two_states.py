@@ -31,12 +31,12 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
     return time_keyword1
 
 #pre-covid
-precovid_keyword1 = getDataFrame('depression', '2018-04-08', '2019-04-06', 'US-OH')
-precovid_keyword2 = getDataFrame('depression', '2018-04-08', '2019-04-06', 'US-OR')
+precovid_keyword1 = getDataFrame('anorexia', '2018-04-08', '2019-04-06', 'US-OH')
+precovid_keyword2 = getDataFrame('anorexia', '2018-04-08', '2019-04-06', 'US-OR')
 
 #during-covid
-duringcovid_keyword3 = getDataFrame('depression', '2020-04-05', '2021-04-03', 'US-OH')
-duringcovid_keyword4 = getDataFrame('depression', '2020-04-05', '2021-04-03', 'US-OR')
+duringcovid_keyword3 = getDataFrame('anorexia', '2020-04-05', '2021-04-03', 'US-OH')
+duringcovid_keyword4 = getDataFrame('anorexia', '2020-04-05', '2021-04-03', 'US-OR')
 
 time1 = precovid_keyword1.index.tolist()
 time1_series = precovid_keyword1.index
@@ -91,22 +91,25 @@ time2_keyword2_2020_21.plot(ax=axes[0])
 time3_keyword2_2020_21.plot(ax=axes[1])
 time4_keyword2_2020_21.plot(ax=axes[1])
 
-axes[0].set_title("Depression 2018-2019")
+axes[0].set_title("Anorexia 2018-2019")
 axes[0].set_xlabel('Months')
 axes[0].set_xticklabels(['blank','April','June','August', 'November', 'January', 'March'])
 axes[0].set_ylabel('Google Search Frequency')
 
-axes[1].set_title("Depression 2020-2021")
+axes[1].set_title("Anorexia 2020-2021")
 axes[1].set_xlabel('Months')
 axes[1].set_xticklabels(['blank','April','June','August', 'November', 'January', 'March'])
 axes[1].set_ylabel('Google Search Frequency')
+
+axes[0].legend(loc='upper left')
+axes[1].legend(loc='upper left')
 
 plt.show()
 
 
 # # first create a dataframe with 2 columns of data from the
 # # 2 timeframes we have above time1_keyword1_2020_21 and time1_keyword1_2018_19
-# # Now the data frame will look like 2018_19_Depression and 2020_21_Depression by week
+# # Now the data frame will look like 2018_19_addiction and 2020_21_addiction by week
 #
 # my_df_dict2 = {'2018_19' : keyword1_series , '2020_21' : keyword2_series}
 

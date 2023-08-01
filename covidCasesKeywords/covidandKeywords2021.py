@@ -67,7 +67,7 @@ df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['ca
 
 df_max_scaled['casesbyweek']  = round(df_max_scaled['casesbyweek'] * 100)
 
-print(df_max_scaled['casesbyweek']  )
+# print(df_max_scaled['casesbyweek']  )
 
 
 # GOOGLE TRENDS API PART
@@ -99,7 +99,6 @@ print(google_trends)
 # gets correlation between the casesbyweek (scaled) and other google trends
 usCovidData = df_max_scaled['casesbyweek'].to_list()
 print(usCovidData)
-
 print(str(numpy.corrcoef(google_trends,usCovidData)))
 
 plt.scatter(usCovidData, google_trends , label='scatterplot')
