@@ -47,7 +47,7 @@ for index, row in my_us_df.iterrows():
 
 prevdate = '2020-04-05'
 cases_sum = 0
-for index, row in uscasesbydate.iterrows():
+for index, row in uscasesbydate.iterrows()
 
     if (index % 7 != 0):
         cases_sum = cases_sum + int(row['casesbydate'])

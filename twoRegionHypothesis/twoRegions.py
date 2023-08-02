@@ -21,14 +21,14 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
     })
     return time_keyword1
 
-time_keyword1 = getDataFrame('anorexia','2018-04-04','2019-04-06', 'US-TX')
+time_keyword1 = getDataFrame('anorexia','2018-04-04','2019-04-06', 'US-OH')
 time_keyword2 = getDataFrame('anorexia','2018-04-05','2019-04-06', 'US-OH')
 
 time1 = time_keyword1.index.tolist()
 keyword1 = time_keyword1['Keyword'].tolist()
 time1_keyword1_2018_19 = pd.DataFrame(
     {'Time': time1,
-     'Anorexia 2018-2019 US-TX': keyword1,
+     'Anorexia 2018-2019 US-OH': keyword1,
     })
 
 time2 = time_keyword2.index.tolist()
@@ -38,8 +38,8 @@ time2_keyword2_2020_21 = pd.DataFrame(
      'Anorexia 2018-2019 US-OH': keyword2,
     })
 
-ax = time1_keyword1_2018_19.plot(x='Time', y='Anorexia 2018-2019 US-TX')
-time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Anorexia 2018-2019 US-OH')
+ax = time1_keyword1_2018_19.plot(x='Time', y='Anorexia 2018-2019 US-OH')
+time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Anorexia 2020-2021 US-OH')
 
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
