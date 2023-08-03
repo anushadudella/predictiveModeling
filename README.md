@@ -1,8 +1,5 @@
 <br />
 <div align="center">
-  <a href="https://github.com/anushadudella/predictiveModeling">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Quantifying the Impact of the COVID-19 Pandemic on Mental Health
 Searches Using Time Series Modeling, Euclidean Distance and
@@ -29,9 +26,7 @@ Granger’s Causality</h3>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
