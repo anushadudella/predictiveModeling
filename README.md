@@ -1,4 +1,5 @@
 <br />
+<a name="readme-top"></a>
 <div align="center">
 
 <h2 align="center">Quantifying the Impact of the COVID-19 Pandemic on Mental Health
