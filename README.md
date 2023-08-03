@@ -7,27 +7,6 @@
 <h3 align="center">Quantifying the Impact of the COVID-19 Pandemic on Mental Health
 Searches Using Time Series Modeling, Euclidean Distance and
 Granger’s Causality</h3>
-
-  <p align="center">
-    COVID-19 is a contagious disease caused by the virus severe acute respiratory syndrome (SARS-CoV-2). Since its
-introduction in Wuhan, China in 2019, this virus has spread to over 213 countries worldwide and was most
-prevalent in the United States. While related diseases and variants of COVID-19 are tracked via the CDC
-surveillance systems, increases of mental health disorders are under-estimated. According to the Kaiser Family
-Foundation, concerns about mental health and substance abuse remain elevated three years after the onset of the
-COVID-19 pandemic. As the topic of mental health is closely related to social media and a user’s search trends, I
-decided to establish this relationship and predict google search frequencies of mental health related keywords based
-on numbers of COVID-19 cases. The objective of my research is to quantify the impact of the COVID-19 pandemic
-on the the potential increase of these mental health related keywords.
-    <br />
-    <a href="https://github.com/anushadudella/predictiveModeling/docs"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/anushadudella/predictiveModeling/docs">View Demo</a>
-    ·
-    <a href="https://github.com/anushadudella/predictiveModeling/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/anushadudella/predictiveModeling/issues">Request Feature</a>
-  </p>
 </div>
 
 
