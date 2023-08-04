@@ -1,0 +1,2 @@
+ State with Euclidean Distance [[  0.         152.56146302]
+ [152.56146302   0.        ]]
