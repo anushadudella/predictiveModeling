@@ -17,7 +17,7 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
     dfkeyword1 = df3[keyword1].tolist()
     time_keyword1 = pd.DataFrame(
     {'Time': dftimes1,
-     'Depression': dfkeyword1,
+     'Anorexia': dfkeyword1,
     })
     return time_keyword1
 
@@ -44,9 +44,9 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
 #     return time_keyword1
 
 
-keyword2 = 'Depression'
-geoparam1 = 'US-NC'
-geoparam2 = 'US-NY'
+keyword2 = 'Anorexia'
+geoparam1 = 'US-TX'
+geoparam2 = 'US-TX'
 
 date1 = '2018-04-04'
 date2 = '2019-04-06'
@@ -64,8 +64,8 @@ try:
     time_keyword2 = getDataFrame(keyword2, date1, date4, geoparam2)
     print(time_keyword2)
 
-    ax = time_keyword1.plot(x='Time', y='Depression')
-    time_keyword2.plot(ax=ax, x='Time', y='Depression')
+    ax = time_keyword1.plot(x='Time', y='Anorexia')
+    time_keyword2.plot(ax=ax, x='Time', y='Anorexia')
     plt.show()
 
 except Exception as e:

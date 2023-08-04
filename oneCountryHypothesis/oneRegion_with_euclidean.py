@@ -31,8 +31,8 @@ def getDataFrame(keyword1, date1, date2):
     return time_keyword1
 
 
-time_keyword1 = getDataFrame('anxiety', '2018-04-08', '2019-04-06')
-time_keyword2 = getDataFrame('anxiety', '2020-04-05', '2021-04-03')
+time_keyword1 = getDataFrame('insomnia', '2018-04-08', '2019-04-06')
+time_keyword2 = getDataFrame('insomnia', '2020-04-05', '2021-04-03')
 
 time1 = time_keyword1.index.tolist()
 time1_series = time_keyword1.index
@@ -41,7 +41,7 @@ keyword1_series = time_keyword1['Keyword']
 
 time1_keyword1_2018_19 = pd.DataFrame(
     {'Time': time1,
-     'Anxiety 2018-2019': keyword1,
+     'Insomnia 2018-2019': keyword1,
      })
 
 time2 = time_keyword2.index.tolist()
@@ -50,15 +50,15 @@ keyword2_series = time_keyword2['Keyword']
 
 time2_keyword2_2020_21 = pd.DataFrame(
     {'Time': time2,
-     'Anxiety 2020-2021': keyword2,
+     'Insomnia 2020-2021': keyword2,
      })
 
-ax = time1_keyword1_2018_19.plot(x='Time', y='Anxiety 2018-2019')
-time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Anxiety 2020-2021')
+ax = time1_keyword1_2018_19.plot(x='Time', y='Insomnia 2018-2019')
+time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Insomnia 2020-2021')
 
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
-#plt.show()
+plt.show()
 
 
 # first create a dataframe with 2 columns of data from the

@@ -54,7 +54,7 @@ for index,row in uscasesbydate.iterrows():
         cases_sum = 0
 
 df_max_scaled = uscasesbyweek.copy()
-
+print(df_max_scaled.head(10))
 
 # apply normalization techniques (scales it down)
 df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['casesbyweek'].min()) / (

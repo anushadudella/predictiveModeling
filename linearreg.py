@@ -160,9 +160,15 @@ def main():
     predictions = model.predict(x_test.reshape(-1,1))
 
     plt.scatter(y_test, predictions)
-    plt.show()
 
+    plt.xlabel('US COVID-19 cases')
+    plt.ylabel('ADHD Search Frequency')
+    plt.title('Linear Regression')
+    plt.show()
     plt.hist(y_test - predictions)
+    plt.title('Residual Error Plot')
+    plt.xlabel('Residuals')
+    plt.ylabel('Frequency')
     plt.show()
 
     print(metrics.mean_absolute_error(y_test, predictions))

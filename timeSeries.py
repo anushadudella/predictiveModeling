@@ -22,7 +22,7 @@ def getDataFrame(keyword1, date1, date2):
     dfkeyword1 = df3[keyword1].tolist()
     time_keyword1 = pd.DataFrame(
     {'Time': dftimes1,
-     'Keyword': dfkeyword1,
+     'Anorexia': dfkeyword1,
     })
     return time_keyword1
 
@@ -32,7 +32,7 @@ def getDataFrame(keyword1, date1, date2):
 
 time_keyword1 = getDataFrame('Anorexia','2020-04-04', '2021-04-06')
 time_keyword2 = getDataFrame('Anorexia','2021-04-04', '2022-04-06')
-ax = time_keyword1.plot(x='Time', y='Keyword')
-time_keyword2.plot(ax=ax, x='Time', y='Keyword')
+ax = time_keyword1.plot(x='Time', y='Anorexia')
+time_keyword2.plot(ax=ax, x='Time', y='Anorexia')
 #
 plt.show()
