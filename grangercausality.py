@@ -7,19 +7,17 @@ import numpy as np
 import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests
 import Constants
+from loadInput import loadFiles
 
-df2020 = pd.read_csv(Constants.INPUT_LOC + '/' + 'us-counties-2020.csv')
-df2021 = pd.read_csv(Constants.INPUT_LOC + '/' + 'us-counties-2021.csv')
 
-combine_df = [df2020, df2021]
-df = pd.concat(combine_df)
+df = loadFiles()
 
-date_df = pd.DataFrame(df[(df['date'] >= '2020-04-05') & (df['date'] <= '2021-04-03')])
+date_df = pd.DataFrame(df[(df['date'] >= Constants.COVID_START_DATE) & (df['date'] <= Constants.COVID_END_WEEK)])
 my_us_df = pd.DataFrame(date_df, columns=['date', 'cases'])
 
 my_us_df.sort_values(by=['date'])
 cases_sum = 0
-prevdate = '2020-04-05'
+prevdate = Constants.COVID_START_DATE
 
 uscasesbydate = pd.DataFrame(columns=['date', 'casesbydate'])
 uscasesbyweek = pd.DataFrame(columns=['weekdate', 'casesbyweek'])
@@ -46,7 +44,7 @@ for index, row in my_us_df.iterrows():
         cases_sum = 0
         prevdate = row['date']
 
-prevdate = '2020-04-05'
+prevdate = Constants.COVID_START_DATE
 cases_sum = 0
 for index, row in uscasesbydate.iterrows():
 
@@ -87,7 +85,7 @@ def getDataFrame(keyword1, date1, date2):
     return time_keyword1
 
 
-all_keyworddata = getDataFrame('ADHD', '2020-04-05', '2021-04-03')
+all_keyworddata = getDataFrame('ADHD', Constants.COVID_START_DATE, Constants.COVID_END_WEEK)
 time_keyword1 = all_keyworddata
 
 

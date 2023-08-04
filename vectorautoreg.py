@@ -4,6 +4,8 @@ import pmdarima as pm
 import matplotlib.pyplot as plt
 import warnings
 
+import Constants
+
 warnings.filterwarnings('ignore')
 import pandas as pd
 from pytrends.request import TrendReq
@@ -11,19 +13,15 @@ import numpy as np
 import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests
 from statsmodels.tsa.stattools import adfuller
+from loadInput import loadFiles
 
-df2020 = pd.read_csv('/input/us-counties-2020.csv')
-df2021 = pd.read_csv('/input/us-counties-2021.csv')
-
-combine_df = [df2020, df2021]
-df = pd.concat(combine_df)
-
-date_df = pd.DataFrame(df[(df['date'] >= '2020-04-05') & (df['date'] <= '2021-04-03')])
+df = loadFiles()
+date_df = pd.DataFrame(df[(df['date'] >= Constants.COVID_START_DATE) & (df['date'] <= Constants.COVID_END_WEEK)])
 my_us_df = pd.DataFrame(date_df, columns=['date', 'cases'])
 
 my_us_df.sort_values(by=['date'])
 cases_sum = 0
-prevdate = '2020-04-05'
+prevdate = Constants.COVID_START_DATE
 
 uscasesbydate = pd.DataFrame(columns=['date', 'casesbydate'])
 uscasesbyweek = pd.DataFrame(columns=['weekdate', 'casesbyweek'])
@@ -50,7 +48,7 @@ for index, row in my_us_df.iterrows():
         cases_sum = 0
         prevdate = row['date']
 
-prevdate = '2020-04-05'
+prevdate = Constants.COVID_START_DATE
 cases_sum = 0
 for index, row in uscasesbydate.iterrows():
 
@@ -82,16 +80,10 @@ def getGoogleArray(keyword1, date1, date2):
 
 def getDataFrame(keyword1, date1, date2):
     df3 = getGoogleArray(keyword1, date1, date2)
-    dftimes1 = df3.index.tolist()
-    dfkeyword1 = df3[keyword1].tolist()
-    time_keyword1 = pd.DataFrame(
-        {'Time': dftimes1,
-         'ADHD': dfkeyword1,
-         })
-    return df3 # returning the raw dataframe instead of the dftimes1
+    return df3
 
 
-all_keyworddata = getDataFrame('ADHD', '2020-04-05', '2021-04-03')
+all_keyworddata = getDataFrame('ADHD', Constants.COVID_START_DATE, Constants.COVID_END_WEEK)
 time_keyword1 = all_keyworddata
 
 time_keyword1 = time_keyword1.drop(['isPartial'], axis=1)
@@ -110,27 +102,23 @@ time_keyword1['uscases'] = rowdata
 
 final_df=time_keyword1.resample('W').mean()
 
-#print(final_df.tail(18))
-
 model = pm.auto_arima(final_df['uscases'],
-                        m=12, seasonal=True,
+                        m=20, seasonal=True,
                       start_p=0, start_q=0, max_order=4, test='adf',error_action='ignore',
                            suppress_warnings=True,
                       stepwise=True, trace=True, seasonal_test = 'ch')
 
-train=final_df[(final_df.index.get_level_values(0) >= '2020-04-05') & (final_df.index.get_level_values(0) <= '2021-02-27')]
-test=final_df[(final_df.index.get_level_values(0) > '2021-02-27')]
+train=final_df[(final_df.index.get_level_values(0) >= Constants.COVID_START_DATE) & (final_df.index.get_level_values(0) <= Constants.COVID_END_WEEK_70_PERCENT)]
+test=final_df[(final_df.index.get_level_values(0) > Constants.COVID_END_WEEK_70_PERCENT)]
 
 
 model.fit(train['uscases'])
-forecast=model.predict(n_periods=12, return_conf_int=True)
+forecast=model.predict(n_periods=20, return_conf_int=True)
 
 forecast_df = pd.DataFrame(forecast[0],index = test.index,columns=['Prediction'])
 
-print(forecast_df)
-
 pd.concat([final_df['uscases'],forecast_df],axis=1).plot()
-plt.show() # US Covid Cases Prediction
+plt.savefig(Constants.OUTPUT_LOC + 'USCovidPrediction_ARIMA.jpeg', bbox_inches='tight')
 
 model = pm.auto_arima(final_df['ADHD'],
                         m=12, seasonal=True,
@@ -138,15 +126,13 @@ model = pm.auto_arima(final_df['ADHD'],
                            suppress_warnings=True,
                       stepwise=True, trace=True, seasonal_test = 'ch')
 
-train=final_df[(final_df.index.get_level_values(0) >= '2020-04-05') & (final_df.index.get_level_values(0) <= '2021-02-27')]
-test=final_df[(final_df.index.get_level_values(0) > '2021-02-27')]
+train=final_df[(final_df.index.get_level_values(0) >= Constants.COVID_START_DATE) & (final_df.index.get_level_values(0) <= Constants.COVID_END_WEEK_70_PERCENT)]
+test=final_df[(final_df.index.get_level_values(0) > Constants.COVID_END_WEEK_70_PERCENT)]
 
 model.fit(train['ADHD'])
-forecast=model.predict(n_periods=12, return_conf_int=True)
+forecast=model.predict(n_periods=20, return_conf_int=True)
 
 forecast_df = pd.DataFrame(forecast[0],index = test.index,columns=['Prediction'])
 
-print(forecast_df)
-
 pd.concat([final_df['ADHD'],forecast_df],axis=1).plot()
-plt.show() # ADHD search criteria prediction
+plt.savefig(Constants.OUTPUT_LOC + 'ADHDPrediction_ARIMA.jpeg', bbox_inches='tight')

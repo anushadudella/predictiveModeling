@@ -67,13 +67,24 @@ on the the potential increase of these mental health related keywords.
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Project Files and Usage
 
-Write some getting started notes here...
+| **Python File Names** | **Description**                     | **Output**        | **Input**           | Hypothesis | **** |
+|----------------------|-------------------------------------|-------------------|----------------------|------|------|
+| linearreg.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |    
+| grangercasuality.py         | Creates the granger casuality test | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |  III    |      |  
+| arimamodel.py         | Creates the arima model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |  
+| calcCorrCoeff.py         | Calculates the correlation coefficent | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |
+| stateWithEuclidDist.py         | Calcualtes Euclidean Distance for a State with 2 different Time Periods | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |   
+| get.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |   
+| calcCorrCoeff.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |      
+
+                   
 
 ### Prerequisites
 
 Please follow the below instructions to install the required software to run this project.
+
 * python
   ```sh
   sudo apt install python
@@ -113,27 +124,10 @@ Run the following command to create the graphs and corresponding output files.
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- LICENSE -->
 ## License
 
-Distributed under the ![GPL 3.0 License ](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Distributed under the [![GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,10 +147,10 @@ Project Link: [https://github.com/anushadudella/predictiveModeling](https://gith
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Sarah Colin]()
-* [Selina Medchel]()
-* [Mark Emry]()
-* [Mark Galassi]()
+* [Del Valle, Sara Y][sarah-url]
+* [Hulley, Selina Amanda]
+* [Mark Emry][emry-url]
+* [Mark Galassi][galassi-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,5 +182,8 @@ Project Link: [https://github.com/anushadudella/predictiveModeling](https://gith
 [matplotlib-url]: https://matplotlib.org
 [newyorktimes.com]: https://img.shields.io/badge/newyorktimes-0769AD?style=for-the-badge&logo=newyorktimes&logoColor=white
 [newyorktimes-url]: https://newyorktimes.com
+[galassi-url]: https://galassi.org
+[sarah-url]: https://public.lanl.gov/sdelvall/
+[emry-url]: https://mcneil.roundrockisd.org/team/mark-emry/
 
 

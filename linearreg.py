@@ -12,6 +12,7 @@ from sklearn import metrics
 from pathlib import Path
 
 import Constants
+from loadInput import loadFiles
 
 
 def insert(df, row):
@@ -80,25 +81,7 @@ def getScaledData(dfUSCovid):
 
 def main():
 
-    # observations / data
-    directory = Constants.INPUT_LOC
-    files = list(Path(directory).glob('*'))
-
-    df = pd.DataFrame()
-    lsDataframes = []
-
-    try:
-        if (len(files) < 1):
-            raise Exception()
-        else:
-            for file in files:
-                df_temp = pd.read_csv(file)
-                lsDataframes.append(df_temp)
-            df = pd.concat(lsDataframes)
-            print(df.size)
-    except:
-        print(" No COVID case files found ")
-        sys.exit()
+    df = loadFiles()
 
     date_df = pd.DataFrame(df[(df['date'] >= Constants.COVID_START_DATE) & (df['date'] <= Constants.COVID_END_WEEK)])
     US_df = pd.DataFrame(date_df, columns=['date', 'cases'])
@@ -140,12 +123,20 @@ def main():
     predictions = model.predict(x_test.reshape(-1,1))
 
     plt.scatter(y_test, predictions)
-    plt.show()
-    plt.savefig(Constants.OUTPUT_LOC + 'scatterplot.jpeg', bbox_inches='tight')
+    plt.xlabel('Predicted Test Values')
+    plt.ylabel('Actual Test Values')
+    plt.savefig(Constants.OUTPUT_LOC + 'linear_reg_scatterplot.jpeg', bbox_inches='tight')
+    plt.clf()
+    plt.cla()
+    plt.close()
 
     plt.hist(y_test - predictions)
-    plt.show()
-    plt.savefig(Constants.OUTPUT_LOC + 'residualsplot.jpeg', bbox_inches='tight')
+    plt.xlabel('Residual Errors')
+    plt.ylabel('Frequency of Errors')
+    plt.savefig(Constants.OUTPUT_LOC + 'linear_reg_residualsplot.jpeg', bbox_inches='tight')
+    plt.clf()
+    plt.cla()
+    plt.close()
 
     fOutput.write(' Mean Absolute Error ' + str(metrics.mean_absolute_error(y_test, predictions)) + Constants.NEW_LINE)
     fOutput.write(' Mean Squared Error ' + str(metrics.mean_squared_error(y_test, predictions)) + Constants.NEW_LINE)

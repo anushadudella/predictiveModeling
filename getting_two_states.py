@@ -6,6 +6,7 @@ from sklearn.metrics.pairwise import euclidean_distances
 # import pandas as pd
 from sklearn.linear_model import LinearRegression
 import pandas as pd
+import Constants
 
 
 # from statsmodels.tsa.stattools import adfuller
@@ -75,13 +76,6 @@ time4_keyword2_2020_21 = pd.DataFrame(
      'Oregon': precovid2,
      })
 
-# ax = time1_keyword1_2018_19.plot(x='Time', y='Anxiety 2018-2019')
-# time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Anxiety 2020-2021')
-#
-# plt.xlabel('Time in Weeks')
-# plt.ylabel('Freq. of Keywords')
-#plt.show()
-
 #define subplot layout
 fig, axes = plt.subplots(nrows=1, ncols=2)
 
@@ -104,12 +98,5 @@ axes[1].set_ylabel('Google Search Frequency')
 axes[0].legend(loc='upper left')
 axes[1].legend(loc='upper left')
 
-plt.show()
-
-
-# # first create a dataframe with 2 columns of data from the
-# # 2 timeframes we have above time1_keyword1_2020_21 and time1_keyword1_2018_19
-# # Now the data frame will look like 2018_19_addiction and 2020_21_addiction by week
-#
-# my_df_dict2 = {'2018_19' : keyword1_series , '2020_21' : keyword2_series}
+plt.savefig(Constants.OUTPUT_LOC + 'getTwoStates.jpeg', bbox_inches='tight')
 

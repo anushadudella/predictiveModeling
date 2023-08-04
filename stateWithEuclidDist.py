@@ -6,16 +6,10 @@ import pandas as pd
 import Constants
 
 
-# from statsmodels.tsa.stattools import adfuller
-# from statsmodels.tsa.seasonal import seasonal_decompose
-
 def getGoogleArray(keyword1, date1, date2, GEOPARAM):
     pytrend = TrendReq()
     pytrend.build_payload(kw_list=[keyword1], timeframe=[date1 + ' ' + date2], geo=GEOPARAM)
     df2 = pytrend.interest_over_time()
-    # filepath = Path('/Users/kkaa_austin/PycharmProjects/PredictCovid/' + keyword1
-    #                 + '_' + date1 + '_' + date2 + '_' + 'Data.csv')
-    # df2.to_csv(filepath)
     return df2
 
 def getDataFrame(keyword1, date1, date2, GEOPARAM):
@@ -70,5 +64,6 @@ my_df = pd.DataFrame(my_df_dict2)
 
 euc_dist = euclidean_distances(my_df.T)
 fOutput = open(Constants.STATE_EUCLID_DIST_OUTPUT, "w")
+fOutput.write(' State We Calculated For : ' + 'US-OH' + Constants.NEW_LINE + Constants.NEW_LINE)
 fOutput.write(' State with Euclidean Distance ' + str(euc_dist))
 fOutput.close()

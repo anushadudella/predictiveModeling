@@ -2,20 +2,19 @@ import pandas as pd
 from pytrends.request import TrendReq
 import numpy
 import matplotlib.pyplot as plt
+from loadInput import loadFiles
+import Constants
+from loadInput import  loadFiles
 
-df2020 = pd.read_csv('us-counties-2020.csv')
-df2021 = pd.read_csv('us-counties-2021.csv')
+df = loadFiles()
 
-combine_df = [df2020,df2021]
-df = pd.concat(combine_df)
-
-date_df = pd.DataFrame(df[(df['date'] >= '2020-04-05') & (df['date'] <= '2021-04-03')])
+date_df = pd.DataFrame(df[(df['date'] >= Constants.COVID_START_DATE) & (df['date'] <= Constants.COVID_END_WEEK)])
 #april_df = pd.DataFrame(date_df[date_df['state'] == 'Oregon'])
 my_us_df = pd.DataFrame(date_df, columns = ['date','cases'])
 
 my_us_df.sort_values(by=['date'])
 cases_sum = 0
-prevdate = '2020-04-05'
+prevdate =Constants.COVID_START_DATE
 
 uscasesbydate = pd.DataFrame(columns = ['date', 'casesbydate'])
 uscasesbyweek = pd.DataFrame(columns = ['weekdate', 'casesbyweek'])
@@ -40,7 +39,7 @@ for index,row in my_us_df.iterrows():
         cases_sum = 0
         prevdate = row['date']
 
-prevdate = '2020-04-05'
+prevdate = Constants.COVID_START_DATE
 cases_sum = 0
 for index,row in uscasesbydate.iterrows():
 
@@ -54,21 +53,12 @@ for index,row in uscasesbydate.iterrows():
         cases_sum = 0
 
 df_max_scaled = uscasesbyweek.copy()
-print(df_max_scaled.head(10))
 
 # apply normalization techniques (scales it down)
 df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['casesbyweek'].min()) / (
                 df_max_scaled['casesbyweek'].max() - df_max_scaled['casesbyweek'].min())
 
-# df_max_scaled['casesbyweek'] = df_max_scaled['casesbyweek'] / df_max_scaled['casesbyweek'].abs().max()
-#
-# df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] -
-#                        df_max_scaled['casesbyweek'].mean()) / df_max_scaled['casesbyweek'].std()
-
 df_max_scaled['casesbyweek']  = round(df_max_scaled['casesbyweek'] * 100)
-
-# print(df_max_scaled['casesbyweek']  )
-
 
 # GOOGLE TRENDS API PART
 
@@ -89,20 +79,21 @@ def getDataFrame(keyword1, date1, date2):
     return time_keyword1
 
 
-all_keyworddata= getDataFrame('ADHD','2020-04-05', '2021-04-03')
-time_keyword1 = all_keyworddata #pd.DataFrame(all_keyworddata[all_keyworddata['Time'] <= '2020-12-27'])
+all_keyworddata= getDataFrame('ADHD',Constants.COVID_START_DATE, Constants.COVID_END_WEEK)
+time_keyword1 = all_keyworddata
 
 # print(time_keyword1)
 google_trends = time_keyword1['ADHD'].to_list()
-print(google_trends)
 
 # gets correlation between the casesbyweek (scaled) and other google trends
 usCovidData = df_max_scaled['casesbyweek'].to_list()
-print(usCovidData)
-print(str(numpy.corrcoef(google_trends,usCovidData)))
+
+fOutput = open(Constants.CORR_COEF_OUTPUT, "w")
+fOutput.write(' Correlation Coefficient Between COVID-19 and ADHD : ' + str(numpy.corrcoef(google_trends,usCovidData))+ Constants.NEW_LINE)
+fOutput.close()
 
 plt.scatter(usCovidData, google_trends , label='scatterplot')
 plt.legend(loc='best', fontsize=16)
 plt.xlabel('COVID-19')
 plt.ylabel('ADHD')
-plt.show()
+plt.savefig(Constants.OUTPUT_LOC + 'COVID_ADHD_Scatterplot.jpeg', bbox_inches='tight')

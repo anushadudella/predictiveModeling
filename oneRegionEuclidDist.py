@@ -58,17 +58,14 @@ time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Insomnia 2020-2021')
 
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
-plt.show()
-
 
 # first create a dataframe with 2 columns of data from the
 # 2 timeframes we have above time1_keyword1_2020_21 and time1_keyword1_2018_19
 # Now the data frame will look like 2018_19_Depression and 2020_21_Depression by week
 
 my_df_dict2 = {'2018_19' : keyword1_series , '2020_21' : keyword2_series}
-
 my_df = pd.DataFrame(my_df_dict2)
-print(my_df)
+
 
 euc_dist = euclidean_distances(my_df.T)
 print(euc_dist)

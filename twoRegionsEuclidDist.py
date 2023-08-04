@@ -18,25 +18,25 @@ def getDataFrame(keyword1, date1, date2, GEOPARAM):
     })
     return time_keyword1
 
-time_keyword1 = getDataFrame('insomnia','2018-04-04','2019-04-06', 'US-NY')
-time_keyword2 = getDataFrame('insomnia','2020-04-05','2021-04-06', 'US-NY')
+time_keyword1 = getDataFrame('anxiety','2018-04-04','2019-04-06', 'US-OH')
+time_keyword2 = getDataFrame('anxiety','2020-04-05','2021-04-06', 'US-OH')
 
 time1 = time_keyword1.index.tolist()
 keyword1 = time_keyword1['Keyword'].tolist()
 time1_keyword1_2018_19 = pd.DataFrame(
     {'Time': time1,
-     'Insomnia 2018-2019 US-NY': keyword1,
+     'anxiety 2018-2019 US-OH': keyword1,
     })
 
 time2 = time_keyword2.index.tolist()
 keyword2 = time_keyword2['Keyword'].tolist()
 time2_keyword2_2020_21 = pd.DataFrame(
     {'Time': time2,
-     'Insomnia 2020-2021 US-NY': keyword2,
+     'anxiety 2020-2021 US-OH': keyword2,
     })
 
-ax = time1_keyword1_2018_19.plot(x='Time', y='Insomnia 2018-2019 US-NY')
-time2_keyword2_2020_21.plot(ax=ax, x='Time', y='Insomnia 2020-2021 US-NY')
+ax = time1_keyword1_2018_19.plot(x='Time', y='anxiety 2018-2019 US-OH')
+time2_keyword2_2020_21.plot(ax=ax, x='Time', y='anxiety 2020-2021 US-OH')
 
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
