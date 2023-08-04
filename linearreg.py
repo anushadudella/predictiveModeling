@@ -1,7 +1,4 @@
-import pandas as pd
-import plotly.express as px
-import pmdarima as pm
-import matplotlib.pyplot as plt
+import sys
 import warnings
 
 warnings.filterwarnings('ignore')
@@ -12,6 +9,9 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
+from pathlib import Path
+
+import Constants
 
 
 def insert(df, row):
@@ -33,76 +33,17 @@ def getGoogleArray(keyword1, date1, date2):
 
 def getDataFrame(keyword1, date1, date2):
     df3 = getGoogleArray(keyword1, date1, date2)
-    dftimes1 = df3.index.tolist()
-    dfkeyword1 = df3[keyword1].tolist()
-    time_keyword1 = pd.DataFrame(
-        {'Time': dftimes1,
-         'ADHD': dfkeyword1,
-         })
     return df3
 
-
-
-
-def estimate_coef(x, y):
-    # number of observations/points
-    n = np.size(x)
-
-    # mean of x and y vector
-    m_x = np.mean(x)
-    m_y = np.mean(y)
-
-    # calculating cross-deviation and deviation about x
-    SS_xy = np.sum(y * x) - n * m_y * m_x
-    SS_xx = np.sum(x * x) - n * m_x * m_x
-
-    # calculating regression coefficients
-    b_1 = SS_xy / SS_xx
-    b_0 = m_y - b_1 * m_x
-
-    return (b_0, b_1)
-
-
-def plot_regression_line(x, y, b):
-    # plotting the actual points as scatter plot
-    plt.scatter(x, y, color="m",
-                marker="o", s=30)
-
-    # predicted response vector
-    y_pred = b[0] + b[1] * x
-
-    # plotting the regression line
-    plt.plot(x, y_pred, color="g")
-
-    # putting labels
-    plt.xlabel('x')
-    plt.ylabel('y')
-
-    # function to show plot
-    plt.show()
-
-
-def main():
-
-    # observations / data
-    df2020 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2020.csv')
-    df2021 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2021.csv')
-
-    combine_df = [df2020, df2021]
-    df = pd.concat(combine_df)
-
-    date_df = pd.DataFrame(df[(df['date'] >= '2020-04-05') & (df['date'] <= '2021-12-31')])
-    my_us_df = pd.DataFrame(date_df, columns=['date', 'cases'])
-
-    my_us_df.sort_values(by=['date'])
-    cases_sum = 0
-    prevdate = '2020-04-05'
+def getScaledData(dfUSCovid):
 
     uscasesbydate = pd.DataFrame(columns=['date', 'casesbydate'])
     uscasesbyweek = pd.DataFrame(columns=['weekdate', 'casesbyweek'])
 
-    rowdata = []
-    for index, row in my_us_df.iterrows():
+    prevdate = Constants.COVID_START_DATE
+    cases_sum = 0
+
+    for index, row in dfUSCovid.iterrows():
         if (row['date'] == prevdate):
             cases_sum = cases_sum + row['cases']
         else:
@@ -113,10 +54,10 @@ def main():
             cases_sum = 0
             prevdate = row['date']
 
-    prevdate = '2020-04-05'
+    prevdate = Constants.COVID_START_DATE
     cases_sum = 0
-    for index, row in uscasesbydate.iterrows():
 
+    for index, row in uscasesbydate.iterrows():
         if (index % 7 != 0):
             cases_sum = cases_sum + int(row['casesbydate'])
         else:
@@ -128,13 +69,48 @@ def main():
 
     df_max_scaled = uscasesbyweek.copy()
 
-    # apply normalization techniques (scales it down)
+    # apply normalization techniques (scales it down to value between 0 and 1)
     df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['casesbyweek'].min()) / (
             df_max_scaled['casesbyweek'].max() - df_max_scaled['casesbyweek'].min())
 
     df_max_scaled['casesbyweek'] = round(df_max_scaled['casesbyweek'] * 100)
 
-    all_keyworddata = getDataFrame('ADHD', '2020-04-05', '2021-12-26')
+    return df_max_scaled
+
+
+def main():
+
+    # observations / data
+    directory = Constants.INPUT_LOC
+    files = list(Path(directory).glob('*'))
+
+    df = pd.DataFrame()
+    lsDataframes = []
+
+    try:
+        if (len(files) < 1):
+            raise Exception()
+        else:
+            for file in files:
+                df_temp = pd.read_csv(file)
+                lsDataframes.append(df_temp)
+            df = pd.concat(lsDataframes)
+            print(df.size)
+    except:
+        print(" No COVID case files found ")
+        sys.exit()
+
+    date_df = pd.DataFrame(df[(df['date'] >= Constants.COVID_START_DATE) & (df['date'] <= Constants.COVID_END_WEEK)])
+    US_df = pd.DataFrame(date_df, columns=['date', 'cases'])
+
+    US_df.sort_values(by=['date'])
+
+
+# Get a scaled dataframe to be uniform with google trands data
+
+    df_max_scaled = getScaledData(US_df)
+
+    all_keyworddata = getDataFrame('ADHD', Constants.COVID_START_DATE, Constants.COVID_END_WEEK)
     time_keyword1 = all_keyworddata
 
     time_keyword1 = time_keyword1.drop(['isPartial'], axis=1)
@@ -149,32 +125,33 @@ def main():
     x = np.array(lstUSCoviddata)
     y = np.array(google_trends)
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = Constants.TEST_SZ)
 
     model = LinearRegression()
     model.fit(x_train.reshape(-1, 1), y_train)
 
-    print(model.coef_)
+    # write out put values to a file
+
+    fOutput = open(Constants.LINEAR_REG_OUTPUT, "w")
+
+    fOutput.write(' Linear regression Model Coefficient : ' + str(model.coef_) + Constants.NEW_LINE)
 
     #predicting the test values
     predictions = model.predict(x_test.reshape(-1,1))
 
     plt.scatter(y_test, predictions)
-
-    plt.xlabel('US COVID-19 cases')
-    plt.ylabel('ADHD Search Frequency')
-    plt.title('Linear Regression')
     plt.show()
+    plt.savefig(Constants.OUTPUT_LOC + 'scatterplot.jpeg', bbox_inches='tight')
+
     plt.hist(y_test - predictions)
-    plt.title('Residual Error Plot')
-    plt.xlabel('Residuals')
-    plt.ylabel('Frequency')
     plt.show()
+    plt.savefig(Constants.OUTPUT_LOC + 'residualsplot.jpeg', bbox_inches='tight')
 
-    print(metrics.mean_absolute_error(y_test, predictions))
-    print(metrics.mean_squared_error(y_test, predictions))
-    print(np.sqrt(metrics.mean_squared_error(y_test, predictions)))
+    fOutput.write(' Mean Absolute Error ' + str(metrics.mean_absolute_error(y_test, predictions)) + Constants.NEW_LINE)
+    fOutput.write(' Mean Squared Error ' + str(metrics.mean_squared_error(y_test, predictions)) + Constants.NEW_LINE)
+    fOutput.write(' Root Mean Squared Error ' + str(np.sqrt(metrics.mean_squared_error(y_test, predictions))) + Constants.NEW_LINE)
 
+    fOutput.close()
 
 if __name__ == "__main__":
     main()

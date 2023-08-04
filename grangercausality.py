@@ -6,9 +6,10 @@ from pytrends.request import TrendReq
 import numpy as np
 import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests
+import Constants
 
-df2020 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2020.csv')
-df2021 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2021.csv')
+df2020 = pd.read_csv(Constants.INPUT_LOC + '/' + 'us-counties-2020.csv')
+df2021 = pd.read_csv(Constants.INPUT_LOC + '/' + 'us-counties-2021.csv')
 
 combine_df = [df2020, df2021]
 df = pd.concat(combine_df)
@@ -66,10 +67,6 @@ df_max_scaled['casesbyweek'] = (df_max_scaled['casesbyweek'] - df_max_scaled['ca
 
 df_max_scaled['casesbyweek'] = round(df_max_scaled['casesbyweek'] * 100)
 
-
-# print(df_max_scaled['casesbyweek']  )
-
-
 # GOOGLE TRENDS API PART
 
 def getGoogleArray(keyword1, date1, date2):
@@ -116,9 +113,6 @@ for row1 in usCovidData.iterrows():
 
 results['uscases'] = rowdata
 
-print(results.tail(10))
-
-
 def grangers_causation_matrix(data, variables, test='ssr_chi2test', verbose=False):
     """Check Granger Causality of all possible combinations of the Time series.
     The rows are the response variable, columns are predictors. The values in the table
@@ -143,4 +137,6 @@ def grangers_causation_matrix(data, variables, test='ssr_chi2test', verbose=Fals
     df.index = [var + '_y' for var in variables]
     return df
 
-print(grangers_causation_matrix(results,['adhd','uscases']))
+fOutput = open(Constants.GRANGER_OUTPUT, "w")
+fOutput.write(' Granger Casuality Matrix ' + Constants.NEW_LINE + str(grangers_causation_matrix(results,['adhd','uscases'])))
+fOutput.close()

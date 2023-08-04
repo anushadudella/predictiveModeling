@@ -12,8 +12,8 @@ import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests
 from statsmodels.tsa.stattools import adfuller
 
-df2020 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2020.csv')
-df2021 = pd.read_csv('/home/adudella/PycharmProjects/predictiveModeling/covidCasesKeywords/us-counties-2021.csv')
+df2020 = pd.read_csv('/input/us-counties-2020.csv')
+df2021 = pd.read_csv('/input/us-counties-2021.csv')
 
 combine_df = [df2020, df2021]
 df = pd.concat(combine_df)
