@@ -144,6 +144,7 @@ Run the following command to create the graphs and corresponding output files.
 ** Steps to generate Presentation **
 
    ```sh
+   cd ./Presentation
    ./pdflatex AnushaDudella_PredictiveModelingPresentation.tex  
  
    ```
@@ -151,12 +152,20 @@ Run the following command to create the graphs and corresponding output files.
 ** Steps to generate Research Paper **
 AnushaDudella_PredictiveModelingPaper.tex
    ```sh
+   cd ./Paper
    ./pdflatex AnushaDudella_PredictiveModelingPaper.tex  
  
    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+** Steps to generate Side Project Presentation **
+Anusha_Dudella_MoleculeVisualizing.tex
+   ```sh
+   cd ./SideProject
+   ./pdflatex Anusha_Dudella_MoleculeVisualizing.tex 
+ 
+   ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
