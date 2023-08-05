@@ -177,7 +177,7 @@ Distributed under the [[GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0.
 <!-- CONTACT -->
 ## Contact
 
-Anusha Dudella  - anusharao4262@gmail.com
+Anusha Dudella  - anusharao4262@gmail.com<br>
 [Anusha Dudella LinkedIn][linkedin-url]
 
 
