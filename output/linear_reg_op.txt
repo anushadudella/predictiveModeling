@@ -1,0 +1,4 @@
+ Linear regression Model Coefficient : [0.41413951]
+ Mean Absolute Error 5.141732882573802
+ Mean Squared Error 38.0605978679842
+ Root Mean Squared Error 6.169327181142544

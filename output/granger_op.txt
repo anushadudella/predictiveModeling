@@ -1,6 +1,4 @@
- Granger Casuality Matrix
-
-
+ Granger Casuality Matrix 
            adhd_x  uscases_x
-adhd_y     1.0000        0.0
-uscases_y  0.0001        1.0
+adhd_y        1.0        0.0
+uscases_y     0.0        1.0
