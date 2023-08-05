@@ -1,0 +1,2108 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{46}{\textperiodcentered}
+\DeclareUnicodeCharacter{8220}{\textquotedblleft}
+\DeclareUnicodeCharacter{58}{$\colon$}
+\DeclareUnicodeCharacter{8217}{\textquoteright}
+\DeclareUnicodeCharacter{60}{\textless}
+\DeclareUnicodeCharacter{62}{\textgreater}
+\DeclareUnicodeCharacter{32}{$\ $}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=793pt,paperheight=446pt]{geometry}
+\begin{document}
+\definecolor{color_283006}{rgb}{1,1,1}
+\definecolor{color_74077}{rgb}{0.172549,0.243137,0.313726}
+\definecolor{color_60761}{rgb}{0.101961,0.737255,0.611765}
+\definecolor{color_29791}{rgb}{0,0,0}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, 10.45599pt)
+ -- (-15pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(381.85pt, -287.182pt) -- (-15pt, -287.182pt)
+ -- (-15pt, -287.182pt)
+ -- (-15pt, 10.45599pt)
+ -- (-15pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, -287.182pt)
+ -- (778.701pt, -287.182pt)
+ -- (381.85pt, -287.182pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(381.85pt, -287.182pt) -- (-15pt, -287.182pt)
+ -- (-15pt, -287.182pt)
+ -- (-15pt, 10.45599pt)
+ -- (-15pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, -287.182pt)
+ -- (778.701pt, -287.182pt)
+ -- (381.85pt, -287.182pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(30.609,-160.643){\fontsize{29.991}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Quantifying the Impact of the COVID-19 Pandemic on }
+\put(57.992,-210.533){\fontsize{29.991}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Mental Health Searches Using Euclidean Distance, }
+\put(147.397,-260.338){\fontsize{29.991}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Granger’s Causality, and Regression}
+\put(292.587,-314.933){\fontsize{21.997}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_283006}By: Anusha Dudella}
+\put(291.992,-339.339){\fontsize{21.997}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_283006}McNeil High School}
+\put(194.594,-388.038){\fontsize{21.997}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_283006}Mentors: Sara Del Valle and Selina Hulley}
+\put(236.206,-412.331){\fontsize{21.997}{1}\usefont{T1}{cmr}{m}{it}\selectfont\color{color_283006}Los Alamos National Laboratory}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}2}
+\put(308.49,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Introduction}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}The COVID-19 pandemic increased mental health }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}prevalence around the globe by around 25\% (WHO, }
+\put(47.391,-184.653){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}2022)}
+\put(21.907,-220.936){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Many people do not seek help for mental health }
+\put(47.391,-254.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}due to stigma }
+\put(21.907,-291.037){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-296.848){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Assessed the role of internet data in mental health }
+\put(47.391,-324.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}prevalence in the US}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}3}
+\put(315.69,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypotheses}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in the US}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}4}
+\put(315.69,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypotheses}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in the US}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in Oregon more than in }
+\put(47.391,-254.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Ohio}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}5}
+\put(315.69,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypotheses}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in the US}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in Oregon more than in }
+\put(47.391,-254.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Ohio}
+\put(21.907,-291.037){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-296.848){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 trends are predictive of ADHD search }
+\put(47.391,-324.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}interests in the US}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}6}
+\put(333.009,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Datasets}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Used Google Trends for getting the frequencies of }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}mental health searches }
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}PyTrends is the underlying API }
+\put(21.907,-235.138){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-240.949){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}New York Times database for COVID-19 case counts}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}7}
+\put(311.693,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Sparse Data}
+\put(222.288,-389.853){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Cl}
+\put(183.028,-358.501){\includegraphics[width=359.972pt,height=270pt]{latexImage_0b2b1ac8fca09bbd6b3f4fa28289b973.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}8}
+\put(178.691,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Data Alignment and Normalization}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Converted daily rolling averages for NY COVID case }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}data to weekly rolling averages}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Used min-max scaling in order to normalize NY }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}CO}
+\put(165,-385.516){\includegraphics[width=396pt,height=122.598pt]{latexImage_6c074edb59b1ed697947cc1126b92f96.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(729.888,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}9}
+\put(303.387,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Goo}
+\put(6.712999,-378.231){\includegraphics[width=374.315pt,height=280.715pt]{latexImage_936847a3b68c462a09fb16a01db64481.png}}
+\put(381,-385.516){\includegraphics[width=383.981pt,height=288pt]{latexImage_622df9d98f22fea23a765c30110adb3b.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}10}
+\put(247.602,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypothesis 1 Approach}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in the US}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Data visualizing: compared frequencies of }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}keywords for before (2018-2019) and during COVID }
+\put(47.391,-254.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}(2020-2021)}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}11}
+\put(247.687,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}COVID-19 vs Anorexia}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Cannot establish whether COVID-19 caused an }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}increase in anorexia searches.}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Cyclic appearance in both pre-COVID and COVID }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}years. Seasonal increase in the spring and fall.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(110.972,-403.516){\includegraphics[width=533.991pt,height=400.479pt]{latexImage_622df9d98f22fea23a765c30110adb3b.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}13}
+\put(255.709,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}COVID-19 vs Anxiety}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}There was an increase in search frequencies for }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}anxiety in 2020-2021 (COVID) than in 2018-2019.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(111,-403.516){\includegraphics[width=504pt,height=378pt]{latexImage_39276cce4049626086a63df7b6756acb.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}15}
+\put(236.49,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}COVID-19 vs Depression}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}There was an decrease in search frequencies for }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression in 2020-2021 (COVID) than in 2018-}
+\put(47.391,-184.653){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}2019.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(129,-398.98){\includegraphics[width=521.972pt,height=391.465pt]{latexImage_7ac12e8dae539f98bdf93fee44140cb7.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}17}
+\put(247.602,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypothesis 2 Approach}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 increased anorexia, anxiety, and }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}depression search interest in Oregon more than in }
+\put(47.391,-184.653){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Ohio}
+\put(21.907,-220.936){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Looked at regional data and then selected the two }
+\put(47.391,-254.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}most differing regions using Euclidean distance}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(85.346,-385.516){\includegraphics[width=596.665pt,height=346.394pt]{latexImage_6a6681dbb9fa6e70578e0619d42e994a.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}19}
+\put(271.101,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Eucli}
+\put(-12.704,-296.253){\includegraphics[width=375.732pt,height=180.709pt]{latexImage_e091130dbb57b7e0445f17550dae6a5d.png}}
+\put(348.685,-296.253){\includegraphics[width=392.315pt,height=135.581pt]{latexImage_a23a4c75838f2ebe3ae5c485ae78516b.png}}
+\put(45.208,-349.431){\fontsize{19.191}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Euclidean Distance = square root of the sum of the vertical lines}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}20}
+\put(265.8,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Euclidean Distances}
+\put(169.592,-142.331){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     Colorado        Texas}
+\put(455.296,-122.234){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(455.296,-142.331){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}        Oregon          Ohio}
+\put(26.811,-198.939){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anorexia      249.79     160.18       359.47      143.82}
+\put(26.811,-256.256){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Depression}
+\put(169.592,-236.045){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(169.592,-256.256){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}      247.64     146.66       428.55        72.09}
+\put(26.811,-313.431){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Anxiety      259.92     142.18       438.30        57.96}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.693pt, -103.043pt) -- (738.506pt, -103.043pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.948pt, -102.788pt) -- (23.948pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(166.786pt, -102.788pt) -- (166.786pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(309.624pt, -102.788pt) -- (309.624pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(452.461pt, -102.788pt) -- (452.461pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(595.299pt, -102.788pt) -- (595.299pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(738.25pt, -102.788pt) -- (738.25pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.693pt, -159.623pt) -- (738.506pt, -159.623pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.693pt, -216.883pt) -- (738.506pt, -216.883pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.693pt, -274.142pt) -- (738.506pt, -274.142pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(23.693pt, -331.572pt) -- (738.506pt, -331.572pt)
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(24.798,-363.831){\fontsize{15.392}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Distance of 438.30 indicates distance between 2018-2019 and 2020-2021 line }
+\put(24.798,-381.746){\fontsize{15.392}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}plots.}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(8.981001,-359.437){\includegraphics[width=384.009pt,height=297.921pt]{latexImage_e1cafd3488326991843b389957e3ad3f.png}}
+\put(162.987,-83.25699){\fontsize{24.009}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}O}
+\put(392.991,-367.516){\includegraphics[width=378.028pt,height=306pt]{latexImage_e7a1792187bbfabeba4312716dc7f321.png}}
+\put(540.987,-83.25699){\fontsize{24.009}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Oregon}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}22}
+\put(247.602,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Hypothesis 3 Approach}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}COVID-19 trends are predictive of ADHD search }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}interests in the US}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Keywords, R squared, tested for causality, }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}implemented regression model}
+\put(21.907,-263.144){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-268.955){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}ADHD > 0.5 }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}23}
+\put(274.304,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Granger Causality}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Test that proves whether one time series is useful }
+\put(47.391,-156.731){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}in forecasting another}
+\put(21.907,-193.043){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Does not account for any confounding/external }
+\put(47.391,-226.832){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}variables}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}24}
+\put(274.304,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Granger Causality}
+\put(21.907,-122.942){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-128.753){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}H0: “Is not predictive” HA: “Is predictive”}
+\put(21.907,-165.037){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-170.933){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}P-value: measures how confident we are about }
+\put(47.391,-198.854){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}assumption given observed data}
+\put(21.907,-235.138){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-240.949){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}P val <= 0.05: reject H0}
+\put(21.907,-277.232){\fontsize{10.8}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-283.157){\fontsize{24.009}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}P val > 0.05: “fail to reject” H0}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}25}
+\put(228.893,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Granger Causality Results}
+\put(255.198,-150.637){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ADHD\_XUS\_Cases\_X}
+\put(17.088,-217.336){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}ADHD\_Y1.00.0}
+\put(17.088,-284.035){\fontsize{18}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}US\_Cases\_Y0.01.0}
+\end{picture}
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.50002pt,line join=round]
+(13.998pt, -131.531pt) -- (728.811pt, -131.531pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(14.254pt, -131.276pt) -- (14.254pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(252.335pt, -131.276pt) -- (252.335pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(490.417pt, -131.276pt) -- (490.417pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(728.556pt, -131.276pt) -- (728.556pt, -331.827pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(13.998pt, -198.202pt) -- (728.811pt, -198.202pt)
+;
+\draw[color_29791,line width=0.50002pt,line join=round]
+(13.998pt, -264.873pt) -- (728.811pt, -264.873pt)
+;
+\end{tikzpicture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\draw[color_29791,line width=0.50002pt,line join=round]
+(13.998pt, -331.572pt) -- (728.811pt, -331.572pt)
+;
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}26}
+\put(166.389,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Implementation of Linear Regression}
+\put(21.907,-124.331){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-130.653){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Trained regression model on 70\% of data}
+\put(21.907,-168.75){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-175.043){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}T}
+\put(147,-335.938){\includegraphics[width=396pt,height=112.422pt]{latexImage_5a41d9bbb305d32a9ccaa6cbc5eed42f.png}}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}27}
+\put(251.91,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}RMSE/Residual Error}
+\put(83.901,-134.253){\fontsize{25.994}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}RMSE (root mean }
+\put(136.002,-158.942){\fontsize{20.013}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}squared)}
+\put(482.792,-130.738){\fontsize{25.994}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}Residual Error }
+\put(549.094,-160.955){\fontsize{25.994}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}Plo}
+\put(39,-277.516){\includegraphics[width=345.543pt,height=108pt]{latexImage_7522ce4f1fb3905ab9b13002a86647ae.png}}
+\put(435,-331.516){\includegraphics[width=342pt,height=162.482pt]{latexImage_7721437bb02cf816db73dd54d117901d.png}}
+\put(475.564,-403.516){\includegraphics[width=193.465pt,height=57.657pt]{latexImage_7cb6d0bc720b8a9dc21ef5c749643b7e.png}}
+\put(17.003,-379.648){\fontsize{25.994}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}Average error rate is around 4\%}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}28}
+\put(306.194,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}To conclude..}
+\put(21.907,-124.331){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-130.653){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Hypothesis 1: COVID-19 increased anorexia, }
+\put(47.391,-160.842){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}anxiety, and depression search interest in the }
+\put(47.391,-191.031){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}US }
+\put(21.907,-229.242){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-235.535){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Hypothesis 2: COVID-19 increased anorexia, }
+\put(47.391,-265.752){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}anxiety, and depression search interest in }
+\put(47.391,-296.054){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Oregon more than in Ohio}
+\put(21.907,-334.152){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-340.445){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Hypothesis 3: COVID-19 trends are predictive }
+\put(47.391,-370.634){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}of ADHD search interests in the US}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, -414.741pt)
+ -- (-15pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -414.741pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -85.185pt) -- (-15pt, -85.185pt)
+ -- (-15pt, -85.185pt)
+ -- (-15pt, 10.48401pt)
+ -- (-15pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, 10.48401pt)
+ -- (778.701pt, -85.185pt)
+ -- (778.701pt, -85.185pt)
+ -- (381.85pt, -85.185pt) -- cycle
+;
+\filldraw[color_60761][even odd rule]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt)
+ -- (753.926pt, -414.769pt) -- cycle
+;
+\draw[color_60761,line width=0.85038pt,line join=round]
+(753.926pt, -414.769pt) .. controls (753.926pt, -417.859pt) and (753.104pt, -420.92pt) .. (751.545pt, -423.613pt)
+ -- (751.545pt, -423.613pt) .. controls (749.986pt, -426.306pt) and (747.746pt, -428.546pt) .. (745.054pt, -430.105pt)
+ -- (745.054pt, -430.105pt) .. controls (742.361pt, -431.664pt) and (739.299pt, -432.486pt) .. (736.209pt, -432.486pt)
+ -- (736.209pt, -432.486pt) .. controls (733.091pt, -432.486pt) and (730.03pt, -431.664pt) .. (727.337pt, -430.105pt)
+ -- (727.337pt, -430.105pt) .. controls (724.644pt, -428.546pt) and (722.405pt, -426.306pt) .. (720.846pt, -423.613pt)
+ -- (720.846pt, -423.613pt) .. controls (719.287pt, -420.92pt) and (718.465pt, -417.859pt) .. (718.465pt, -414.769pt)
+ -- (718.465pt, -414.769pt) .. controls (718.465pt, -411.651pt) and (719.287pt, -408.59pt) .. (720.846pt, -405.897pt)
+ -- (720.846pt, -405.897pt) .. controls (722.405pt, -403.204pt) and (724.644pt, -400.964pt) .. (727.337pt, -399.405pt)
+ -- (727.337pt, -399.405pt) .. controls (730.03pt, -397.846pt) and (733.091pt, -397.024pt) .. (736.209pt, -397.024pt)
+ -- (736.209pt, -397.024pt) .. controls (739.299pt, -397.024pt) and (742.361pt, -397.846pt) .. (745.054pt, -399.405pt)
+ -- (745.054pt, -399.405pt) .. controls (747.746pt, -400.964pt) and (749.986pt, -403.204pt) .. (751.545pt, -405.897pt)
+ -- (751.545pt, -405.897pt) .. controls (753.104pt, -408.59pt) and (753.926pt, -411.651pt) .. (753.926pt, -414.769pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}29}
+\put(292.106,-44.73499){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}Key Takeaways}
+\put(21.907,-124.331){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-130.653){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Clean data}
+\put(21.907,-168.75){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-175.043){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Using the right model for your }
+\put(47.391,-205.232){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}dataset/hypothesis}
+\put(21.907,-243.443){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-249.651){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Making meaningful graphs}
+\put(21.907,-287.834){\fontsize{11.707}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_74077}●}
+\put(47.391,-294.155){\fontsize{25.994}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Deleting useless files}
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]
+\path(0pt,0pt);
+\filldraw[color_283006][even odd rule]
+(-15pt, 10.45599pt) -- (778.672pt, 10.45599pt)
+ -- (778.672pt, 10.45599pt)
+ -- (778.672pt, -435.972pt)
+ -- (778.672pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, -435.972pt)
+ -- (-15pt, 10.45599pt) -- cycle
+;
+\filldraw[color_74077][even odd rule]
+(381.85pt, -436.001pt) -- (-15pt, -436.001pt)
+ -- (-15pt, -436.001pt)
+ -- (-15pt, 10.45599pt)
+ -- (-15pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, 10.45599pt)
+ -- (778.701pt, -436.001pt)
+ -- (778.701pt, -436.001pt)
+ -- (381.85pt, -436.001pt) -- cycle
+;
+\filldraw[color_283006][even odd rule]
+(183.425pt, -95.84299pt) -- (183.425pt, -120.561pt)
+ -- (183.425pt, -120.561pt)
+ -- (183.425pt, -139.1pt)
+ -- (183.425pt, -139.1pt)
+ -- (183.425pt, -157.638pt)
+ -- (183.425pt, -157.638pt)
+ -- (183.425pt, -182.867pt)
+ -- (183.425pt, -182.867pt)
+ -- (183.425pt, -201.405pt)
+ -- (183.425pt, -201.405pt)
+ -- (183.425pt, -219.944pt)
+ -- (183.425pt, -219.944pt)
+ -- (183.425pt, -244.69pt)
+ -- (183.425pt, -244.69pt)
+ -- (249.387pt, -244.69pt)
+ -- (249.387pt, -244.69pt)
+ -- (246.808pt, -368.083pt)
+ -- (246.808pt, -368.083pt)
+ -- (348.231pt, -244.69pt)
+ -- (348.231pt, -244.69pt)
+ -- (415.469pt, -244.69pt)
+ -- (415.469pt, -244.69pt)
+ -- (464.906pt, -244.69pt)
+ -- (464.906pt, -244.69pt)
+ -- (514.313pt, -244.69pt)
+ -- (514.313pt, -244.69pt)
+ -- (580.304pt, -244.69pt)
+ -- (580.304pt, -244.69pt)
+ -- (580.304pt, -219.944pt)
+ -- (580.304pt, -219.944pt)
+ -- (580.304pt, -201.405pt)
+ -- (580.304pt, -201.405pt)
+ -- (580.304pt, -182.867pt)
+ -- (580.304pt, -182.867pt)
+ -- (580.304pt, -157.638pt)
+ -- (580.304pt, -157.638pt)
+ -- (580.304pt, -139.1pt)
+ -- (580.304pt, -139.1pt)
+ -- (580.304pt, -120.561pt)
+ -- (580.304pt, -120.561pt)
+ -- (580.304pt, -95.84299pt)
+ -- (580.304pt, -95.84299pt)
+ -- (514.313pt, -95.84299pt)
+ -- (514.313pt, -95.84299pt)
+ -- (464.906pt, -95.84299pt)
+ -- (464.906pt, -95.84299pt)
+ -- (415.469pt, -95.84299pt)
+ -- (415.469pt, -95.84299pt)
+ -- (348.231pt, -95.84299pt)
+ -- (348.231pt, -95.84299pt)
+ -- (298.795pt, -95.84299pt)
+ -- (298.795pt, -95.84299pt)
+ -- (249.387pt, -95.84299pt)
+ -- (249.387pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt) -- cycle
+;
+\draw[color_60761,line width=5.6692pt,line join=round]
+(183.425pt, -95.84299pt) -- (183.425pt, -120.561pt)
+ -- (183.425pt, -120.561pt)
+ -- (183.425pt, -139.1pt)
+ -- (183.425pt, -139.1pt)
+ -- (183.425pt, -157.638pt)
+ -- (183.425pt, -157.638pt)
+ -- (183.425pt, -182.867pt)
+ -- (183.425pt, -182.867pt)
+ -- (183.425pt, -201.405pt)
+ -- (183.425pt, -201.405pt)
+ -- (183.425pt, -219.944pt)
+ -- (183.425pt, -219.944pt)
+ -- (183.425pt, -244.69pt)
+ -- (183.425pt, -244.69pt)
+ -- (249.387pt, -244.69pt)
+ -- (249.387pt, -244.69pt)
+ -- (246.808pt, -368.083pt)
+ -- (246.808pt, -368.083pt)
+ -- (348.231pt, -244.69pt)
+ -- (348.231pt, -244.69pt)
+ -- (415.469pt, -244.69pt)
+ -- (415.469pt, -244.69pt)
+ -- (464.906pt, -244.69pt)
+ -- (464.906pt, -244.69pt)
+ -- (514.313pt, -244.69pt)
+ -- (514.313pt, -244.69pt)
+ -- (580.304pt, -244.69pt)
+ -- (580.304pt, -244.69pt)
+ -- (580.304pt, -219.944pt)
+ -- (580.304pt, -219.944pt)
+ -- (580.304pt, -201.405pt)
+ -- (580.304pt, -201.405pt)
+ -- (580.304pt, -182.867pt)
+ -- (580.304pt, -182.867pt)
+ -- (580.304pt, -157.638pt)
+ -- (580.304pt, -157.638pt)
+ -- (580.304pt, -139.1pt)
+ -- (580.304pt, -139.1pt)
+ -- (580.304pt, -120.561pt)
+ -- (580.304pt, -120.561pt)
+ -- (580.304pt, -95.84299pt)
+ -- (580.304pt, -95.84299pt)
+ -- (514.313pt, -95.84299pt)
+ -- (514.313pt, -95.84299pt)
+ -- (464.906pt, -95.84299pt)
+ -- (464.906pt, -95.84299pt)
+ -- (415.469pt, -95.84299pt)
+ -- (415.469pt, -95.84299pt)
+ -- (348.231pt, -95.84299pt)
+ -- (348.231pt, -95.84299pt)
+ -- (298.795pt, -95.84299pt)
+ -- (298.795pt, -95.84299pt)
+ -- (249.387pt, -95.84299pt)
+ -- (249.387pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt)
+ -- (183.425pt, -95.84299pt) -- cycle
+;
+\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(723.709,-420.949){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_283006}30}
+\put(297.69,-176.035){\fontsize{27.014}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_74077}Questions?}
+\end{picture}
+\end{document}
