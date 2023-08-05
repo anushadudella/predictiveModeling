@@ -170,7 +170,7 @@ Anusha_Dudella_MoleculeVisualizing.tex
 <!-- LICENSE -->
 ## License
 
-Distributed under the [![GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Distributed under the [[GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +178,8 @@ Distributed under the [![GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0
 ## Contact
 
 Anusha Dudella  - anusharao4262@gmail.com
-[![Anusha Dudella LinkedIn][linkedin-shield]][linkedin-url]
+[![Anusha Dudella LinkedIn]
+[linkedin-shield]][linkedin-url]
 
 
 Project Link: [https://github.com/anushadudella/predictiveModeling](https://github.com/anushadudella/predictiveModeling)
