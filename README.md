@@ -178,8 +178,7 @@ Distributed under the [[GPL 3.0 License ]](https://www.gnu.org/licenses/gpl-3.0.
 ## Contact
 
 Anusha Dudella  - anusharao4262@gmail.com
-[![Anusha Dudella LinkedIn]
-[linkedin-shield]][linkedin-url]
+[![Anusha Dudella LinkedIn][linkedin-url]
 
 
 Project Link: [https://github.com/anushadudella/predictiveModeling](https://github.com/anushadudella/predictiveModeling)
