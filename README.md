@@ -69,17 +69,17 @@ on the the potential increase of these mental health related keywords.
 <!-- GETTING STARTED -->
 ## Project Files and Usage
 
-| **Python File Names**  | **Description**                     | **Output**        | **Input**           | Hypothesis | **** |
-|------------------------|-------------------------------------|-------------------|----------------------|------------|------|
-| linearreg.py           | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |    
-| grangercasuality.py    | Creates the granger casuality test  | granger_op.txt    | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
-| arimamodel.py          | Creates the arima model             | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
-| calcCorrCoeff.py       | Calculates the correlation coefficent | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |
-| stateWithEuclidDist.py | Calcualtes Euclidean Distance for a State with 2 different Time Periods | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
-| getting_two_states.py  | Comparing two states for COVID searches | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
-| twoRegionEuclidDist.py | Calculates Euclidean distance between two regios | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |      
-| oneRegion.py           | Calculates the                      | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
-| oneRegionEuclidDist.py |                                     | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
+| **Python File Names**  | **Description**                                                         | **Output**                       | **Input**           | Hypothesis | **** |
+|------------------------|-------------------------------------------------------------------------|----------------------------------|----------------------|------------|------|
+| linearreg.py           | Creates the linear regression model                                     | linear_reg_op.txt                | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |    
+| grangercasuality.py    | Creates the granger casuality test                                      | granger_op.txt                   | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
+| arimamodel.py          | Creates the arima model                                                 | ADHDPrediction_ARIMA.jpeg        | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
+| calcCorrCoeff.py       | Calculates the correlation coefficent                                   | corr_coeff_op.txt                | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |
+| stateWithEuclidDist.py | Calcualtes Euclidean Distance for a State with 2 different Time Periods | state_euclid_dist_op.txt         | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
+| getting_two_states.py  | Comparing two states for COVID searches                                 | getTwoStates.jpeg                | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
+| twoRegionEuclidDist.py | Calculates Euclidean distance between two regions                       | twoRegionEuclidDist.jpeg         | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |      
+| oneRegion.py           | Creates a graph for freq of keyword for one region                      | anxiety_over_twotimeperiods.jpeg | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
+| oneRegionEuclidDist.py | Calculates Euclidean distance for one region (two time periods)         | onregion_op.txt                  | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
 
                    
 

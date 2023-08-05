@@ -6,6 +6,7 @@ from sklearn.metrics.pairwise import euclidean_distances
 # import pandas as pd
 from sklearn.linear_model import LinearRegression
 import pandas as pd
+import Constants
 
 
 # from statsmodels.tsa.stattools import adfuller
@@ -66,7 +67,8 @@ plt.ylabel('Freq. of Keywords')
 my_df_dict2 = {'2018_19' : keyword1_series , '2020_21' : keyword2_series}
 my_df = pd.DataFrame(my_df_dict2)
 
+fOutput = open(Constants.ONE_REGION_OUTPUT, "w")
 
 euc_dist = euclidean_distances(my_df.T)
-print(euc_dist)
-#pd.DataFrame(euc_dist, index=selected, columns=selected)
+fOutput.write(str(euc_dist))
+fOutput.close()

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from pytrends.request import TrendReq
 import pandas as pd
+import Constants
 
 def getGoogleArray(keyword1, date1, date2, GEOPARAM):
     pytrend = TrendReq()
@@ -41,4 +42,4 @@ time2_keyword2_2020_21.plot(ax=ax, x='Time', y='anxiety 2020-2021 US-OH')
 plt.xlabel('Time in Weeks')
 plt.ylabel('Freq. of Keywords')
 plt.legend(loc='upper left')
-plt.show()
+plt.savefig(Constants.OUTPUT_LOC + 'twoRegionEuclidDist.jpeg', bbox_inches='tight')
