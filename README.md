@@ -69,15 +69,17 @@ on the the potential increase of these mental health related keywords.
 <!-- GETTING STARTED -->
 ## Project Files and Usage
 
-| **Python File Names** | **Description**                     | **Output**        | **Input**           | Hypothesis | **** |
-|----------------------|-------------------------------------|-------------------|----------------------|------|------|
-| linearreg.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |    
-| grangercasuality.py         | Creates the granger casuality test | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |  III    |      |  
-| arimamodel.py         | Creates the arima model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |  
-| calcCorrCoeff.py         | Calculates the correlation coefficent | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |   III   |      |
-| stateWithEuclidDist.py         | Calcualtes Euclidean Distance for a State with 2 different Time Periods | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |   
-| get.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |   
-| calcCorrCoeff.py         | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv |      |      |      
+| **Python File Names**  | **Description**                     | **Output**        | **Input**           | Hypothesis | **** |
+|------------------------|-------------------------------------|-------------------|----------------------|------------|------|
+| linearreg.py           | Creates the linear regression model | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |    
+| grangercasuality.py    | Creates the granger casuality test  | granger_op.txt    | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
+| arimamodel.py          | Creates the arima model             | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |  
+| calcCorrCoeff.py       | Calculates the correlation coefficent | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | III        |      |
+| stateWithEuclidDist.py | Calcualtes Euclidean Distance for a State with 2 different Time Periods | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
+| getting_two_states.py  | Comparing two states for COVID searches | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |   
+| twoRegionEuclidDist.py | Calculates Euclidean distance between two regios | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | II         |      |      
+| oneRegion.py           | Calculates the                      | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
+| oneRegionEuclidDist.py |                                     | linear_reg_op.txt | us_counties_2020.csv, us_counties_2021.csv, us_counties_2022.csv | I          |      |      
 
                    
 
@@ -116,9 +118,41 @@ Please follow the below instructions to install the required software to run thi
 
 Run the following command to create the graphs and corresponding output files.
 
+**Hypothesis I - Correlation between Google Searches of keywords and COVID-19**
+   ```sh
+   python oneRegion.py
+   python oneRegionEuclidDist.py
+   ```
+
+**Hypothesis II - State A more than State B**
+   ```sh
+   python twoRegionEuclidDist.py
+   python stateWithEuclidDist.py
+   python getting_two_states.py
+   ```
+
+**Hypothesis III - COVID-19 Case Trends**
+   ```sh
+   python calcCorrCoeff.py
+   python grangerCasuality.py
+   python linearreg.py
+   python arimamodel.py
+ 
+   ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+** Steps to generate Presentation **
 
    ```sh
-   python main.py
+   ./pdflatex AnushaDudella_PredictiveModelingPresentation.tex  
+ 
+   ```
+
+** Steps to generate Research Paper **
+AnushaDudella_PredictiveModelingPaper.tex
+   ```sh
+   ./pdflatex AnushaDudella_PredictiveModelingPaper.tex  
+ 
    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
