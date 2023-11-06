@@ -150,10 +150,10 @@ Run the following command to create the graphs and corresponding output files.
    ```
 
 ** Steps to generate Research Paper **
-AnushaDudella_PredictiveModelingPaper.tex
+AnushaDudella_PredictiveModelingResearchPaper_nodate.tex
    ```sh
    cd ./Paper
-   ./pdflatex AnushaDudella_PredictiveModelingPaper.tex  
+   ./pdflatex AnushaDudella_PredictiveModelingResearchPaper_nodate.tex  
  
    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
